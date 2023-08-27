@@ -1,2 +1,8 @@
 admin
 12345
+
+admin@storefront.com
+12345
+
+storefront user - gunmith
+                  Nky3vZvh@ePJG2w
