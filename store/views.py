@@ -3,9 +3,9 @@ from django.db.models import Count
 from django_filters.rest_framework import DjangoFilterBackend
 from .pagination import DefaultPagination
 from .filters import ProductFilter
-from .models import Product, Cart, Order,Customer, Collection, OrderItem, Review, CartItem
+from .models import Product, Cart, ProductImage, Order,Customer, Collection, OrderItem, Review, CartItem
 from .permissions import IsAdminOrReadOnly, ViewCustomerHistoryPermission, FullDjangoModelPermissions
-from .serializers import ProductSerializer, UpdateOrderSerializer, CreateOrderSerializer, OrderSerializer, CustomerSerializer,CartSerializer, UpdateCartItemSerializer, AddCartItemSerializer,CartItemSerializer, CollectionSerializer, ReviewSerializer
+from .serializers import ProductSerializer, UpdateOrderSerializer, ProductImageSerializer,CreateOrderSerializer, OrderSerializer, CustomerSerializer,CartSerializer, UpdateCartItemSerializer, AddCartItemSerializer,CartItemSerializer, CollectionSerializer, ReviewSerializer
 from rest_framework.decorators import action
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
@@ -17,7 +17,7 @@ from rest_framework.mixins import CreateModelMixin, UpdateModelMixin, DestroyMod
 
 
 class ProductViewSet(ModelViewSet):
-    queryset = Product.objects.all()
+    queryset = Product.objects.prefetch_related('images').all()
     serializer_class = ProductSerializer
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
     filterset_class = ProductFilter
@@ -148,3 +148,13 @@ class OrderViewSet(ModelViewSet):
             return Order.objects.all()
         customer_id= Customer.objects.only('id').get(user_id=user.id)
         return Order.objects.filter(customer_id=customer_id)
+    
+
+class ProductImageViewSet(ModelViewSet):
+    serializer_class = ProductImageSerializer
+    
+    def get_serializer_context(self):
+        return {'product_id': self.kwargs['product_pk']}
+    
+    def get_queryset(self):
+        return ProductImage.objects.filter(product_id=self.kwargs['product_pk'])
