@@ -11,6 +11,7 @@ djangorestframework = "*"
 drf-nested-routers = "*"
 django-filter = "*"
 pillow = "*"
+django-templated-mail = "*"
 
 [dev-packages]
 
