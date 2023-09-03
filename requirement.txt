@@ -7,6 +7,5 @@ admin@storefront.com
 storefront user - gunmith
                   Nky3vZvh@ePJG2w
 
-pillow
-django-templated-mail
+djoser
 smtp4dev(not exactly a librry for fake smtp mail)

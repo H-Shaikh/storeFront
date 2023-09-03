@@ -6,14 +6,15 @@ name = "pypi"
 [packages]
 django = "*"
 django-debug-toolbar = "*"
-mysqlclient = "*"
+mysqlclient = "==2.1.0"
 djangorestframework = "*"
 drf-nested-routers = "*"
 django-filter = "*"
 pillow = "*"
 django-templated-mail = "*"
+djoser = "*"
 
 [dev-packages]
 
 [requires]
-python_version = "3.11"
+python_version = "3.9"
