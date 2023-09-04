@@ -13,6 +13,9 @@ django-filter = "*"
 pillow = "*"
 django-templated-mail = "*"
 djoser = "*"
+redis = "*"
+celery = "*"
+flower = "*"
 
 [dev-packages]
 

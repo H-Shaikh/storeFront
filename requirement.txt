@@ -8,4 +8,7 @@ storefront user - gunmith
                   Nky3vZvh@ePJG2w
 
 djoser
+celery
+flower
+docker
 smtp4dev(not exactly a librry for fake smtp mail)
