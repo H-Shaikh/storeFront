@@ -16,8 +16,14 @@ djoser = "*"
 redis = "*"
 celery = "*"
 flower = "*"
+pytest = "*"
 
 [dev-packages]
+pytest = "*"
+autopep8 = "*"
+pytest-django = "*"
+pytest-watch = "*"
+model-bakery = "*"
 
 [requires]
 python_version = "3.9"
