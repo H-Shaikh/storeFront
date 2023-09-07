@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "0e22b99bd86c930c1a3743f60371905141eff91a3a9e0ca256b0c97ac716d968"
+            "sha256": "4fc825f82d892fc133b9b63649c9ca12b5849cb86d382e5fd23222cc3b40c7a5"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -295,6 +295,14 @@
             ],
             "index": "pypi",
             "version": "==23.2"
+        },
+        "django-redis": {
+            "hashes": [
+                "sha256:2d8660d39f586c41c9907d5395693c477434141690fd7eca9d32376af00b0aac",
+                "sha256:8bc5793ec06b28ea802aad85ec437e7646511d4e571e07ccad19cfed8b9ddd44"
+            ],
+            "index": "pypi",
+            "version": "==5.3.0"
         },
         "django-templated-mail": {
             "hashes": [
@@ -609,7 +617,7 @@
                 "sha256:440d5dd3af93b060174bf433bccd69b0babc3b15b1a8dca43789fd7f61514b36",
                 "sha256:b75ddc264f0ba5615db7ba217daeb99701ad295353c45f9e95963337ceeeffb2"
             ],
-            "markers": "python_version < '3.11'",
+            "markers": "python_version < '3.10'",
             "version": "==4.7.1"
         },
         "tzdata": {
@@ -639,6 +647,14 @@
                 "sha256:a5220780a404dbe3353789870978e472cfe477761f06ee55077256e509b156d0"
             ],
             "version": "==0.2.6"
+        },
+        "whitenoise": {
+            "hashes": [
+                "sha256:15fe60546ac975b58e357ccaeb165a4ca2d0ab697e48450b8f0307ca368195a8",
+                "sha256:16468e9ad2189f09f4a8c635a9031cc9bb2cdbc8e5e53365407acf99f7ade9ec"
+            ],
+            "index": "pypi",
+            "version": "==6.5.0"
         }
     },
     "develop": {
@@ -1515,7 +1531,7 @@
                 "sha256:440d5dd3af93b060174bf433bccd69b0babc3b15b1a8dca43789fd7f61514b36",
                 "sha256:b75ddc264f0ba5615db7ba217daeb99701ad295353c45f9e95963337ceeeffb2"
             ],
-            "markers": "python_version < '3.11'",
+            "markers": "python_version < '3.10'",
             "version": "==4.7.1"
         },
         "urllib3": {
